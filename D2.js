@@ -144,6 +144,9 @@ if (numberToCheck % 2 === 0) {
 
 // ESERCIZIO 10
 //Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
 let val = 7;
 if (val < 10) {
   console.log("Meno di 10");
@@ -154,19 +157,18 @@ if (val < 5) {
   console.log("Uguale a 10 o maggiore");
 }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
+/* SCRIVI QUI LA TUA RISPOSTA */
 const me = {
   name: "John",
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+me.city = "Toronto";
+console.log(me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -174,11 +176,16 @@ const me = {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+delete me.lastName;
+console.log(me);
+
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+me.skills.pop(-1);
+console.log(me.skills);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
@@ -186,8 +193,32 @@ const me = {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+let movie = [];
+let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i < numbersArray.length; i++) {
+  movie.push(numbersArray[i]);
+}
+console.log(movie);
+
+/* oppure */
+
+let emptyArray = [];
+for (let i = 1; i <= 10; i++) {
+  emptyArray.push(i);
+}
+console.log(emptyArray);
+
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+numbersArray.pop(-1);
+numbersArray.push(100);
+console.log(numbersArray);
+
+/* oppure */
+
+numbersArray[numbersArray.length - 1] = 100;
+console.log(numbersArray);
